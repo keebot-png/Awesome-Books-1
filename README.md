@@ -50,4 +50,4 @@ Feel free to check the [issues page](../../issues/).
 
 ## 📝 License
 
-This project is [MIT](./license)
+This project is [MIT](./license) licensed
