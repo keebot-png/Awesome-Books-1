@@ -108,15 +108,15 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
 
 // ======= Date and time functionality =======
 function formatDate(dateObject) {
-    const sections = {
-        date: dateObject.getDate(),
-        month: dateObject.getMonth() + 1,
-        year: dateObject.getFullYear(),
-        hour: (dateObject.getHours() % 12) || 12,
-        minute: dateObject.getMinutes().toString().padStart(2, "0"),
-        amORpm: dateObject.getHours() < 12 ? "AM" : "PM"
-    };
-    return `${sections.date}/${sections.month}/${sections.year} ${sections.hour}:${sections.minute} ${sections.amORpm}`;
+  const sections = {
+    date: dateObject.getDate(),
+    month: dateObject.getMonth() + 1,
+    year: dateObject.getFullYear(),
+    hour: (dateObject.getHours() % 12) || 12,
+    minute: dateObject.getMinutes().toString().padStart(2, '0'),
+    amORpm: dateObject.getHours() < 12 ? 'AM' : 'PM',
+  };
+  return `${sections.date}/${sections.month}/${sections.year} ${sections.hour}:${sections.minute} ${sections.amORpm}`;
 }
 
 const myDate = new Date();
@@ -126,9 +126,10 @@ time.append(formattedDate);
 
 // ======= Dynamic page switcher Javascript =======
 
+// show is used in an onclick event
 function show(shown, hidden, hiddenToo) {
-    document.getElementById(shown).style.display = 'block';
-    document.getElementById(hidden).style.display = 'none';
-    document.getElementById(hiddenToo).style.display = 'none';
-    return false;
+  document.getElementById(shown).style.display = 'block';
+  document.getElementById(hidden).style.display = 'none';
+  document.getElementById(hiddenToo).style.display = 'none';
+  return false;
 }
