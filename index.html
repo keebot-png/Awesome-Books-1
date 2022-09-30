@@ -10,28 +10,68 @@
 </head>
 <body>
     <div class="container mt-4">
-        <h1 class="display-4 text-center">All Awesome Books</h1>
-        <table class="table table-striped mt-5">
-            
-            <tbody id="book-list"></tbody>
 
-        </table>
+        <nav class="navbar navbar-expand-sm bg-light">
+            <div class="container">
+              <a class="navbar-brand" href="#">Awesome Books</a>
+              
+                <div class="navbar-nav ms-auto">
+                  <a class="nav-link tab-1" onclick="return show('page-1', 'page-2', 'page-3');">List</a>
+                  <a class="nav-link tab-2" onclick="return show('page-2', 'page-1', 'page-3');">Add New</a>
+                  <a class="nav-link tab-3" onclick="return show('page-3', 'page-1', 'page-2');">Contact</a>
+                </div>
+              
+            </div>
+          </nav>
 
-        <hr>
-        <h2 class="text-center">Add a New Book</h2>
-        <form id="book-form">
-            <div class="form-group">
-                <label for="title">Title</label>
-                <input type="text" id="title" class="form-control">
+          <!-- Date and Time display -->
+        <p id="showDate" class="text-end">
+        </p>
+        
+
+        <div id="page-1" class="pages">
+            <h2 class="text-center">All Awesome Books</h2>
+            <table class="table table-striped mt-5">
+                
+                <tbody id="book-list"></tbody>
+
+            </table>
+        </div>
+    
+        <div id="page-2" class="pages is-active">
+            <h2 class="text-center">Add a New Book</h2>
+            <form id="book-form">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" class="form-control">
+                </div>
+                <div class="buttonDiv text-center mt-4">
+                <input type="submit" value="Add Book" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+
+        <div id="page-3" class="pages">
+            <h2 class="text-center">Contact Information</h2>
+            <div class="ms-5">
+                <p>Do you have any questions or just want to say "Hello"?,<br>
+                    You can reach out to us!
+                </p>
+                <ul>
+                    <li>Our Email: mail.mail.com</li>
+                    <li>Our Phone number: 0065 343 7211</li>
+                    <li>Our Address: Bird Street 22, Golf Course Estate, Dubai Town, Dubai</li>
+                </ul>
             </div>
-            <div class="form-group">
-                <label for="author">Author</label>
-                <input type="text" id="author" class="form-control">
-            </div>
-            <div class="buttonDiv text-center mt-4">
-            <input type="submit" value="Add Book" class="btn btn-primary">
-            </div>
-        </form>
+        </div>
+
+        <footer class="border border-dark mt-5 mb-2">
+            <p class="m-2">Copyright 2022</p>
+        </footer>
         
     </div>
     <script src="script.js"></script>
