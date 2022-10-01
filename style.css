@@ -10,3 +10,29 @@
 #book-list {
   border: 2px solid black;
 }
+
+.tab-1 {
+  border-right: 3px solid rgb(54, 47, 47);
+}
+
+.tab-2 {
+  border-right: 3px solid rgb(54, 47, 47);
+}
+
+.nav-link {
+  display: block;
+  cursor: pointer;
+}
+
+.pages {
+  display: none;
+  margin-top: 60px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  padding: 50px 30px;
+}
+
+.pages.is-active {
+  display: block;
+}

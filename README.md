@@ -1,18 +1,18 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Awesome Books Basic Javascript
+# Awesome Books Javascript Project
 
-A basic website that allows you to add and remove books. There has been added styling to match the provided template using Bootstrap. Classes and methods were used in this project instead of objects and arrays.
+A basic website that allows you to add and remove books. There has been added styling to match the provided template using Bootstrap. Classes and methods were used in this project instead of objects and arrays. A functional Navbar, footer and a contact page was created. Each nav-item contains an onclick event listener containing a function which enables the user to switch to the corresponding page. Lastly the timestamp below the navbar was added dynamically using Javascript showing the correct date and time.
 
 ## Built With
 
-- Major languages
---  HTML
---  CSS
---  Javascript
+-Major languages
+-  HTML
+-  CSS
+-  Javascript
 
-- Technologies used
---GitHub
+Technologies used
+-  GitHub
 
 
 ## Instuctions to set up project locally

@@ -34,6 +34,7 @@ class Store {
 }
 
 // UI class: Handle UI tasks e.g. when a book displays on the list or removes from the list
+
 class UI {
   static displayBooks() {
     const books = Store.getBooks();
@@ -104,3 +105,31 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
   //  Remove book from store
   Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
 });
+
+// ======= Date and time functionality =======
+function formatDate(dateObject) {
+  const sections = {
+    date: dateObject.getDate(),
+    month: dateObject.getMonth() + 1,
+    year: dateObject.getFullYear(),
+    hour: (dateObject.getHours() % 12) || 12,
+    minute: dateObject.getMinutes().toString().padStart(2, '0'),
+    amORpm: dateObject.getHours() < 12 ? 'AM' : 'PM',
+  };
+  return `${sections.date}/${sections.month}/${sections.year} ${sections.hour}:${sections.minute} ${sections.amORpm}`;
+}
+
+const myDate = new Date();
+const formattedDate = formatDate(myDate);
+const time = document.getElementById('showDate');
+time.append(formattedDate);
+
+// ======= Dynamic page switcher Javascript =======
+
+// show is used in an onclick event
+function show(shown, hidden, hiddenToo) {
+  document.getElementById(shown).style.display = 'block';
+  document.getElementById(hidden).style.display = 'none';
+  document.getElementById(hiddenToo).style.display = 'none';
+  return false;
+}
